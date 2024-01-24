@@ -8,8 +8,47 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,400&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+.mont {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.tsm {
+  font-size: 12px !important;
+}
+.txm{
+  font-size: 10px !important;
+}
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+.condensed {
+  font-family: 'Cabin Condensed', sans-serif;
+  background: #f1f1f1;
+  background-size:cover;
+  font-family: 'Cabin Condensed', sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+svg{font-weight:bold;max-width:600px;height:100%;}
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   background-color: #040404;
   color: #fff;
   position: relative;
@@ -34,6 +73,7 @@ body::before {
   }
 }
 
+
 a {
   color: #18d26e;
   text-decoration: none;
@@ -57,17 +97,13 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: ease-in-out 0.3s;
-  position: relative;
+  /* transition: ease-in-out 0.3s; */
+  /* position: relative; */
   height: 100vh;
   display: flex;
   align-items: center;
   z-index: 997;
-  overflow-y: auto;
-}
-
-#header * {
-  transition: ease-in-out 0.3s;
+  /* overflow-y: auto; */
 }
 
 #header h1 {
@@ -94,7 +130,7 @@ h6 {
 
 #header h2 span {
   color: #fff;
-  border-bottom: 2px solid #18d26e;
+  /* border-bottom: 2px solid #18d26e; */
   padding-bottom: 6px;
 }
 
@@ -180,9 +216,17 @@ h6 {
   #header.header-top {
     height: 60px;
   }
+  #header h2 {
+    text-align: center;
+  }
 
   #header.header-top h1 {
     font-size: 26px;
+  }
+  .waviy {
+    /* position: relative; */
+    display: block;
+    text-align: center;
   }
 }
 
@@ -192,6 +236,16 @@ h6 {
 /**
 * Desktop Navigation 
 */
+.wordd {
+  display: flex;
+  height: 100%;
+}
+.word1 {
+  margin: auto;
+  color: white;
+  /* font: 700 normal 2.5em 'tahoma'; */
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
 .navbar {
   padding: 0;
   margin-top: 35px;

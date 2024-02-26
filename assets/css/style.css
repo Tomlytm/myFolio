@@ -21,12 +21,16 @@
 }
 .waviy {
   position: relative;
+  
+  color:#18d26e;
+
 }
 .waviy span {
   position: relative;
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color:#18d26e !important;
+  /* font-weight: 800 !important; */
   text-transform: uppercase;
   animation: flip 2s infinite;
   animation-delay: calc(.2s * var(--i))
@@ -58,7 +62,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/grey.jpg") top right no-repeat;
+  background: #040404 url("../img/bg.gif") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;

@@ -504,7 +504,20 @@ section .container {
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
-
+.resume-btn {
+  background: linear-gradient(45deg, #ff5f6d, #ffc371) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.resume-btn:hover {
+  font-size: 14px;
+  transition: .5s;
+}
 .about-me .content ul {
   list-style: none;
   padding: 0;

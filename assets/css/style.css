@@ -866,6 +866,11 @@ section .container {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
+.img-fluid {
+  /* height: 200px !important; */
+  /* border-radius: 5px; */
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }

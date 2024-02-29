@@ -236,6 +236,15 @@ h6 {
 #header.header-top h2 {
   display: none;
 }
+#header .short-name {
+  display: none ;
+}
+#header.header-top .long-name {
+  display: none ;
+}
+#header.header-top .short-name {
+  display: block ;
+}
 
 #header.header-top h1 {
   margin-right: auto;

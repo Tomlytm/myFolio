@@ -248,6 +248,21 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  /**
+   * Handle URL hash for portfolio filtering
+   */
+  window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash === '#mobile' || hash === '#portfolio-mobile') {
+      setTimeout(function() {
+        const mobileFilter = document.getElementById('mobile-filter');
+        if (mobileFilter) {
+          mobileFilter.click();
+        }
+      }, 500);
+    }
+  });
   // DArk mode
     var words = ['Hi i like HTML', 'I also like css', 'Lorem ipsum dolor sit amet', ' consectetur adipiscing elit', 'sed do eiusmod tempor incididunt'],
     part,

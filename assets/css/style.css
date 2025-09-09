@@ -1323,3 +1323,7 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+.gnext, .gprev {
+  display: none !important;
+}

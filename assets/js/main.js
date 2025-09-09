@@ -207,6 +207,26 @@
           filter: this.getAttribute('data-filter')
         });
       }, true);
+
+      // Handle URL hash for portfolio filtering after isotope is initialized
+      const hash = window.location.hash;
+      if (hash === '#mobile' || hash === '#portfolio-mobile') {
+        setTimeout(function() {
+          const mobileFilter = document.getElementById('mobile-filter');
+          if (mobileFilter) {
+            // Remove active class from all filters
+            portfolioFilters.forEach(function(el) {
+              el.classList.remove('filter-active');
+            });
+            // Add active class to mobile filter
+            mobileFilter.classList.add('filter-active');
+            // Apply the filter
+            portfolioIsotope.arrange({
+              filter: '.filter-app'
+            });
+          }
+        }, 100);
+      }
     }
 
   });
@@ -249,20 +269,6 @@
    */
   new PureCounter();
 
-  /**
-   * Handle URL hash for portfolio filtering
-   */
-  window.addEventListener('load', function() {
-    const hash = window.location.hash;
-    if (hash === '#mobile' || hash === '#portfolio-mobile') {
-      setTimeout(function() {
-        const mobileFilter = document.getElementById('mobile-filter');
-        if (mobileFilter) {
-          mobileFilter.click();
-        }
-      }, 500);
-    }
-  });
   // DArk mode
     var words = ['Hi i like HTML', 'I also like css', 'Lorem ipsum dolor sit amet', ' consectetur adipiscing elit', 'sed do eiusmod tempor incididunt'],
     part,
